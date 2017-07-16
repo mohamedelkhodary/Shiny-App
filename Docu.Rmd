@@ -1,0 +1,33 @@
+---
+title: "Data Product Final Prezi"
+author: "Mohamed Elkhodary"
+date: "July 16, 2017"
+output:
+  ioslides_presentation:
+    logo: mm.jpg
+---
+
+##Full Graph App
+####This is a simple full graph demonstration app,where you can change full graph size,node color and size as well as edge color and width
+####Input fields will be avaiable to user in order to ernter his desired value for each variable and changes will automatically appear
+
+
+##The Assignment
+####**This assignment consisted of two parts:**     
+1. An R Shiny application, complete with input, reactive output, and associated documentation    
+2. A Reproducible Pitch Presentation in R Studio Presenter, complete with embedded R code
+
+##R package: igraph
+####igraph is used to create the network graph in this app.     
+####For more detail about igraph: <http://igraph.org/>
+
+
+##An example of codes for a full graph
+
+```{r include=FALSE}
+library(igraph); library(dplyr);
+```
+
+```{r fig.align='center', tidy=TRUE, tidy.opts=list(width.cutoff=55)}
+plot(make_full_graph(8) %>% set_edge_attr("color", value = "blue")%>%set_edge_attr("width", value =5)%>%set_vertex_attr("color", value = "green")%>%set_vertex_attr("size", value = 10))
+```
